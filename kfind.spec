@@ -29,6 +29,7 @@ KFind is a graphical tool, and not normally run from the command line.
 %{_docdir}/HTML/*/kfind
 %{_iconsdir}/hicolor/*/apps/kfind.*
 %{_mandir}/man1/kfind.1*
+%{_mandir}/*/man1/kfind.1*
 %{_datadir}/metainfo/org.kde.kfind.appdata.xml
 
 #----------------------------------------------------------------------
