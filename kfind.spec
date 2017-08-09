@@ -1,6 +1,6 @@
 Summary:	KDE utility to find files
 Name:		kfind
-Version:	17.04.3
+Version:	17.07.90
 Release:	1
 Epoch:		1
 License:	LGPLv2+
@@ -31,6 +31,7 @@ KFind is a graphical tool, and not normally run from the command line.
 %{_mandir}/man1/kfind.1*
 %{_mandir}/*/man1/kfind.1*
 %{_datadir}/metainfo/org.kde.kfind.appdata.xml
+%{_sysconfdir}/xdg/kfind.categories
 
 #----------------------------------------------------------------------
 
