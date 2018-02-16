@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kfind-17.12.1.tar.xz: 4de498d65485d1fecb416c9b364dc8aa2800e093
+sources:
+  kfind-17.12.2.tar.xz: d4294de6d5819c6009698cf67934cd724d8f7115
