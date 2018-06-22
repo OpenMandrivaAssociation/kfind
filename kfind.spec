@@ -1,6 +1,6 @@
 Summary:	KDE utility to find files
 Name:		kfind
-Version:	 17.12.2
+Version:	 18.04.2
 Release:	1
 Epoch:		1
 License:	LGPLv2+
