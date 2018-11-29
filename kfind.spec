@@ -14,7 +14,7 @@ BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	cmake(KF5Archive)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5WidgetsAddons)
-
+BuildRequires:	cmake(KF5FileMetaData)
 
 %description
 The Find Files tool is a useful method of searching for specific files
