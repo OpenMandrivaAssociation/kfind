@@ -48,6 +48,3 @@ KFind is a graphical tool, and not normally run from the command line.
 %ninja_install -C build
 
 %find_lang %{name}
-
-# FIXME workaround for gdb 8.3.1 hang
-strip --strip-unneeded %{buildroot}%{_bindir}/*
