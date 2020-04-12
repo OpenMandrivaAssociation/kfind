@@ -9,6 +9,7 @@ License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://utils.kde.org/projects/filelight/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		kfind-20.03.90-qt-5.15.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	cmake(KF5Archive)
@@ -38,7 +39,7 @@ KFind is a graphical tool, and not normally run from the command line.
 #----------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
