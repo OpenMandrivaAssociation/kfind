@@ -2,7 +2,7 @@
 
 Summary:	KDE utility to find files
 Name:		kfind
-Version:	20.08.0
+Version:	20.08.1
 Release:	1
 Epoch:		1
 License:	LGPLv2+
