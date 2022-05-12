@@ -2,7 +2,7 @@
 
 Summary:	KDE utility to find files
 Name:		kfind
-Version:	22.04.0
+Version:	22.04.1
 Release:	1
 Epoch:		1
 License:	LGPLv2+
