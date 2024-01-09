@@ -13,6 +13,10 @@ BuildRequires:	cmake(KF6Archive)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6WidgetsAddons)
 BuildRequires:	cmake(KF6FileMetaData)
+BuildRequires:	cmake(KF6I18n)
+BuildRequires:	cmake(KF6CoreAddons)
+BuildRequires:	cmake(KF6KIO)
+BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(Qt6Concurrent)
 
 %description
