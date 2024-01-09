@@ -18,6 +18,7 @@ BuildRequires:	cmake(KF6CoreAddons)
 BuildRequires:	cmake(KF6KIO)
 BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(Qt6Concurrent)
+BuildRequires:	cmake(Qt6Core5Compat)
 
 %description
 The Find Files tool is a useful method of searching for specific files
