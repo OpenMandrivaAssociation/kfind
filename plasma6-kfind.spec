@@ -4,13 +4,11 @@ Summary:	KDE utility to find files
 Name:		plasma6-kfind
 Version:	24.01.85
 Release:	1
-Epoch:		1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://utils.kde.org/projects/filelight/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kfind-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
-BuildRequires:	cmake(KF6KDELibs4Support)
 BuildRequires:	cmake(KF6Archive)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6WidgetsAddons)
@@ -25,8 +23,8 @@ text in their contents.
 
 KFind is a graphical tool, and not normally run from the command line.
 
-%files -f %{name}.lang
-%{_kde6_applicationsdir}/org.kde.kfind.desktop
+%files -f kfind.lang
+%{_datadir}/applications/org.kde.kfind.desktop
 %{_bindir}/kfind
 %{_docdir}/HTML/*/kfind
 %{_iconsdir}/hicolor/*/apps/kfind.*
@@ -38,7 +36,7 @@ KFind is a graphical tool, and not normally run from the command line.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n kfind-%{version}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
@@ -49,4 +47,4 @@ KFind is a graphical tool, and not normally run from the command line.
 %install
 %ninja_install -C build
 
-%find_lang %{name}
+%find_lang kfind
