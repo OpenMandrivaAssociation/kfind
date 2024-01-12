@@ -2,7 +2,7 @@
 
 Summary:	KDE utility to find files
 Name:		plasma6-kfind
-Version:	24.01.85
+Version:	24.01.90
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
