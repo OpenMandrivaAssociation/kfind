@@ -1,13 +1,20 @@
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	KDE utility to find files
 Name:		plasma6-kfind
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://utils.kde.org/projects/filelight/
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/utilities/kfind/-/archive/%{gitbranch}/kfind-%{gitbranchd}.tar.bz2#/kfind-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kfind-%{version}.tar.xz
+%endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6Archive)
 BuildRequires:	cmake(KF6DocTools)
@@ -42,7 +49,7 @@ KFind is a graphical tool, and not normally run from the command line.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kfind-%{version}
+%autosetup -p1 -n kfind-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
