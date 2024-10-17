@@ -7,7 +7,7 @@ Release:	1
 Epoch:		1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://utils.kde.org/projects/filelight/
+Url:		https://utils.kde.org/projects/filelight/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5KDELibs4Support)
