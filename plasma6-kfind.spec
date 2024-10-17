@@ -9,7 +9,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://utils.kde.org/projects/filelight/
+Url:		https://utils.kde.org/projects/filelight/
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/utilities/kfind/-/archive/%{gitbranch}/kfind-%{gitbranchd}.tar.bz2#/kfind-%{git}.tar.bz2
 %else
