@@ -5,7 +5,7 @@
 
 Summary:	KDE utility to find files
 Name:		kfind
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
@@ -27,6 +27,11 @@ BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(Qt6Concurrent)
 BuildRequires:	cmake(Qt6Core5Compat)
 
+%rename plasma6-kfind
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 The Find Files tool is a useful method of searching for specific files
 on your computer, or for searching for files that match a pattern. An
@@ -36,28 +41,10 @@ text in their contents.
 
 KFind is a graphical tool, and not normally run from the command line.
 
-%files -f kfind.lang
+%files -f %{name}.lang
 %{_datadir}/applications/org.kde.kfind.desktop
 %{_bindir}/kfind
-%{_docdir}/HTML/*/kfind
 %{_iconsdir}/hicolor/*/apps/kfind.*
 %{_mandir}/man1/kfind.1*
-%{_mandir}/*/man1/kfind.1*
 %{_datadir}/metainfo/org.kde.kfind.appdata.xml
 %{_datadir}/qlogging-categories6/kfind.categories
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kfind-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-
-%find_lang kfind
